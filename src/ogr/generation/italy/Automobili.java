@@ -8,7 +8,7 @@ public class Automobili {
 	
 	public void accelera() {
 		
-		if (velocita<=190)
+		if (velocita<=190 && carburante>0)
 			velocita+=10;   // mi incrementa la velocita
 		
 		else 
@@ -34,6 +34,12 @@ public class Automobili {
 		
 		totkmpercorsi += kmpercorsi1h;
 		carburante -= kmpercorsi1h/consumoMedio;
+	
+		if (carburante<=0)
+			velocita=0;
+			
+	
+	
 	}
 		
 	
