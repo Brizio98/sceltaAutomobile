@@ -33,24 +33,30 @@ public class Main {
 		auto2.visualizzaDati();
 		
 		
-		System.out.println("quale auto vuoi guidare? 1 o 2 ");
+		System.out.println("quale auto vuoi guidare? 1/2 o nessuna ");
 		risposta=sc.nextLine();
 		
 		if (risposta.equals("1"))
 			autoCorrente=auto1;
 		else if (risposta.equals("2"))
 			autoCorrente=auto2;
+		else if (risposta.equals("nessuna"));
+		else 
+			System.out.println("risposta non valida");
 		
-		
-		
-		System.out.println("vuoi accelerare o decelerare?");
+		if(risposta.equals("1") || risposta.equals("2")){
+		System.out.println("vuoi accelerare o decelerare o continaure?");
 		risposta=sc.nextLine();
 		
 		if (risposta.equals("accelerare"))
 			autoCorrente.accelera();
-		else if(risposta.equals("accelerare"))
+		else if(risposta.equals("decelerare"))
 			autoCorrente.decelera();
+		else if (risposta.equals("continuare"))
+			System.out.println("nessuna variaizone");
 		
+			
+		}
 		auto1.aggiorna();
 		auto2.aggiorna();
 	
